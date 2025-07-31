@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden State Final Expense Insurance | California</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #e63946;
+            --accent: #ff9e1b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f4f8;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #003a75 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            color: var(--accent);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .logo-text span {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 40, 85, 0.85), rgba(0, 40, 85, 0.9)), url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-family: 'Merriweather', serif;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            background: #ff8c00;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-family: 'Merriweather', serif;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--dark);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            background: var(--primary);
+            color: white;
+            font-size: 2.5rem;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .feature i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(0, 86, 179, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .testimonial p {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .client {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid var(--primary);
+        }
+        
+        .client-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .client-info p {
+            font-style: normal;
+            color: #666;
+            margin: 0;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #003a75 100%);
+            color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info-box {
+            padding-right: 30px;
+        }
+        
+        .contact-info-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-family: 'Merriweather', serif;
+        }
+        
+        .contact-info-box p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-details i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--accent);
+            min-width: 30px;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-form h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            opacity: 1;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .disclaimer {
+            background: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        
+        /* GitHub Steps */
+        .github-steps {
+            background: #fff;
+            padding: 80px 0;
+            border-top: 1px solid #eee;
+        }
+        
+        .steps-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        
+        .terminal {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        
+        .terminal .prompt {
+            color: #66d9ef;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info-box {
+                padding-right: 0;
+                text-align: center;
+            }
+            
+            .contact-details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+            }
+            
+            nav ul {
+                margin: 20px 0;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .contact-info {
+                align-items: center;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .btn {
+                display: block;
+                margin: 15px auto;
+                width: 80%;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <div class="logo-text">
+                    <h1>Golden State Final Expense</h1>
+                    <span>Licensed in California</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <a href="tel:+1-800-555-1234"><i class="fas fa-phone"></i> (800) 555-1234</a>
+                <a href="mailto:info@goldenstatefe.com"><i class="fas fa-envelope"></i> info@goldenstatefe.com</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h2>Protecting California Families Since 2005</h2>
+            <p>Affordable final expense insurance solutions tailored for California residents. Ensure your loved ones aren't burdened by end-of-life costs.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Get a Free Quote</a>
+                <a href="#services" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Final Expense Solutions</h2>
+                <p>We offer comprehensive final expense insurance plans designed to cover funeral costs, medical bills, and other end-of-life expenses.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Guaranteed Acceptance</h3>
+                        <p>No medical exams required. Coverage guaranteed for California residents aged 45-85 regardless of health conditions.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Level Benefit Plans</h3>
+                        <p>Immediate full coverage with premiums that never increase. Protect your family starting today.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Family Coverage</h3>
+                        <p>Special plans for couples and families. Protect everyone you love with comprehensive coverage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="why-choose">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Golden State Final Expense?</h2>
+                <p>With over 15 years serving California families, we understand your unique needs and concerns.</p>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>California Experts</h3>
+                    <p>We specialize in California regulations and market needs. Local expertise you can trust.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-star"></i>
+                    <h3>Top Rated Carriers</h3>
+                    <p>We work with A+ rated insurance carriers to ensure your policy is secure and reliable.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Personalized Service</h3>
+                    <p>One-on-one consultations to find the perfect plan for your needs and budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from California families we've helped secure their future.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"After my husband passed, I was so grateful we had final expense insurance. The team at Golden State made everything so simple during a difficult time."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Maria G.">
+                        <div class="client-info">
+                            <h4>Maria G.</h4>
+                            <p>San Diego, CA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"As a cancer survivor, I thought I couldn't get coverage. Golden State found me an affordable plan that gave me peace of mind."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Robert T.">
+                        <div class="client-info">
+                            <h4>Robert T.</h4>
+                            <p>Sacramento, CA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"The agent took time to explain everything in simple terms. No pressure, just honest advice about what was best for my family."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Jennifer L.">
+                        <div class="client-info">
+                            <h4>Jennifer L.</h4>
+                            <p>Los Angeles, CA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container contact-container">
+            <div class="contact-info-box">
+                <h2>Get Your Free Consultation</h2>
+                <p>Complete this form and one of our licensed California agents will contact you within 24 hours to discuss your needs with no obligation.</p>
+                <div class="contact-details">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>(800) 555-1234</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@goldenstatefe.com</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Serving all of California</span>
+                    </div>
+                </div>
+                <p><strong>Licensed in California</strong><br>
+                License #: 0M12345</p>
+            </div>
+            <div class="contact-form">
+                <h3>Request a Quote</h3>
+                <form id="insuranceForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Zip Code</label>
+                        <input type="text" id="zip" name="zip" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="coverage">Desired Coverage Amount</label>
+                        <select id="coverage" name="coverage" required>
+                            <option value="">Select Coverage</option>
+                            <option value="5000">$5,000</option>
+                            <option value="10000">$10,000</option>
+                            <option value="15000">$15,000</option>
+                            <option value="20000">$20,000</option>
+                            <option value="25000">$25,000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Request Free Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Steps Section -->
+    <section class="github-steps">
+        <div class="container steps-container">
+            <div class="section-title">
+                <h2>How to Host This Website on GitHub</h2>
+                <p>Follow these steps to publish your insurance website using GitHub Pages</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Create a GitHub Account</h3>
+                    <p>If you don't have one, sign up at <a href="https://github.com" target="_blank">github.com</a></p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Create a New Repository</h3>
+                    <p>Click the '+' icon in the top right and select "New repository"</p>
+                    <p>Name it: <code>yourusername.github.io</code> (replace "yourusername" with your actual GitHub username)</p>
+                    <p>Make sure to set the repository to <strong>Public</strong></p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Add Your HTML File</h3>
+                    <p>Create a new file named <code>index.html</code> in your repository</p>
+                    <p>Copy the HTML code for this website and paste it into the file</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Commit Your Changes</h3>
+                    <p>Scroll to the bottom of the page and click "Commit new file"</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Enable GitHub Pages</h3>
+                    <p>Go to your repository's <strong>Settings</strong> tab</p>
+                    <p>Select "Pages" from the left sidebar</p>
+                    <p>Under "Source", choose the <code>main</code> branch and click <strong>Save</strong></p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3>Access Your Live Website</h3>
+                    <p>After a few minutes, your site will be live at:</p>
+                    <p><code>https://yourusername.github.io</code></p>
+                    <p>(Replace "yourusername" with your actual GitHub username)</p>
+                </div>
+            </div>
+            
+            <div class="terminal">
+                <div class="prompt"># Optional: Using Git from command line</div>
+                <div>git clone https://github.com/yourusername/yourusername.github.io.git</div>
+                <div>cd yourusername.github.io</div>
+                <div># Paste this HTML into index.html</div>
+                <div>git add .</div>
+                <div>git commit -m "Add insurance website"</div>
+                <div>git push origin main</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Golden State Final Expense</h3>
+                <p>Providing compassionate final expense insurance solutions to California families since 2005. We're committed to helping you protect your loved ones.</p>
+                <p><i class="fas fa-shield-alt"></i> California License #: 0M12345</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Service Areas</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Los Angeles</a></li>
+                    <li><a href="#">San Diego</a></li>
+                    <li><a href="#">San Francisco</a></li>
+                    <li><a href="#">Sacramento</a></li>
+                    <li><a href="#">All California</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Serving all of California</p>
+                <p><i class="fas fa-phone"></i> (800) 555-1234</p>
+                <p><i class="fas fa-envelope"></i> info@goldenstatefe.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</p>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <div class="container">
+                <p>Licensed in California. Insurance products are subject to terms, conditions, and exclusions. Not all products or services may be available in all states. Policy benefits are reduced by any outstanding loan balance. For complete details, contact the agent. Final expense insurance policies contain exclusions, limitations, reductions of benefits, and terms for keeping them in force. All applications are subject to underwriting approval.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2023 Golden State Final Expense Insurance. All rights reserved. CA License #0M12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission
+        document.getElementById('insuranceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const zip = document.getElementById('zip').value;
+            const coverage = document.getElementById('coverage').value;
+            
+            if(name && email && phone && zip && coverage) {
+                // In a real implementation, you would send this data to a server
+                alert('Thank you, ' + name + '! Your request has been submitted. A licensed agent will contact you shortly.');
+                document.getElementById('insuranceForm').reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
